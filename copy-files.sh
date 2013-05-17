@@ -5,7 +5,7 @@ if [ "x$SYSDIR" = "x" ]; then
 echo "You must specify system directory as first argument";
 exit
 fi
-BASE=../../../vendor/asus/tf101/proprietary
+BASE=../../../vendor/asus/tf101g/proprietary
 rm -rf $BASE/*
 
 for FILE in `cat proprietary-files.txt`; do
@@ -17,4 +17,3 @@ for FILE in `cat proprietary-files.txt`; do
 done
 
 ./setup-makefiles.sh
-

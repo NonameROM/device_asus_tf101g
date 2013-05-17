@@ -1,6 +1,6 @@
 windowsmgr.max_events_per_sec=275
 #
-# system.prop for tf101
+# system.prop for tf101g
 #
 ## cannot take spaces
 
@@ -11,3 +11,7 @@ dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heaputilization=0.25
 dalvik.vm.heapidealfree=8388608
 dalvik.vm.heapconcurrentstart=2097152
+
+#Enable 3g
+rild.libpath=/system/lib/libhuawei-ril.so
+rild.libargs=-d /dev/ttyUSB0

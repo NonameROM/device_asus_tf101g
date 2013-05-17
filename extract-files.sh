@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=../../../vendor/asus/tf101/proprietary
+BASE=../../../vendor/asus/tf101g/proprietary
 rm -rf $BASE/*
 
 for FILE in `cat proprietary-files.txt`; do
