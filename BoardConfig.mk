@@ -88,10 +88,12 @@ USE_CAMERA_STUB := false
 # display
 BOARD_USE_SKIA_LCDTEXT := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
+DEVICE_RESOLUTION := 1280x800
 
 # kernel - disable inline building for now  
 TARGET_KERNEL_SOURCE := kernel/asus/tf101g
 TARGET_KERNEL_CONFIG := katkernel_lidpatch_tf101g_defconfig
+#TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
 
 # recovery
 BOARD_HAS_NO_MISC_PARTITION := true
