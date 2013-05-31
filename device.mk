@@ -151,7 +151,6 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libinvensense_mpl \
     blobpack_tf \
-    mischelp \
     tinymix \
     tinyplay \
     tinyrec \

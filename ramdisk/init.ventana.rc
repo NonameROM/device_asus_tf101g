@@ -123,10 +123,6 @@ on boot
     chown gps system /sys/class/gpio/gpio203/value
     chmod 0664 /sys/class/gpio/gpio203/value
 
-#NTFS exFAT support
-#    insmod /sbin/tntfs.ko
-#    insmod /sbin/texfat.ko
-
 # RIL
 # Define TCP buffer sizes for hspa networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax
@@ -215,14 +211,6 @@ service bugreport /system/bin/dumpstate -d -v -o /data/storage/bugreports/bugrep
     oneshot
     keycodes 115 114
 
-#BCM
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --scopcm=0,2,0,0,0,0,0,0,0,0 \
-    --baudrate 3000000 --patchram /etc/firmware/BCM4329B1_002.002.023.0797.0863.hcd --enable_lpm /dev/ttyHS2
-    class main
-    user root
-    group system bluetooth net_bt_admin misc
-    disabled
-
 # Start GPS daemon
   on boot
   service gps-daemon /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
@@ -240,38 +228,12 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --scopcm=0,2,0,0,0
 #    umount /mnt/usbdrive
 
 # configure MSC partition
-service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
-    disabled
-    class main
-    user root
-    group root
-    oneshot
+#service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
+#    disabled
+#    class main
+#    user root
+#    group root
+#    oneshot
 
-on property:sys.shutdown.requested=1recovery
-    start mischelp
-
-# Prepare TF service
-service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
-    disabled
-    class main
-    user root
-    group shell
-    oneshot
-
-# Create data directory and start service
-on property:tf.enable=y
-    mkdir /data/tf
-    start tf_daemon
-
-service BtService /system/bin/sh /system/etc/BtService.sh
-     user root
-     group root
-     disabled
-     oneshot
-
-service ps3service /system/bin/ps3service
-    class main
-    user root
-    group root
-    disabled
-    oneshot
+#on property:sys.shutdown.requested=1recovery
+#    start mischelp
