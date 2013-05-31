@@ -14,14 +14,9 @@
 # limitations under the License.
 #
 
-# camera
-PRODUCT_PACKAGES := \
-	HoloSpiralWallpaper \
-	LiveWallpapersPicker \
-	VisualizationWallpapers
-
+# Camera
 PRODUCT_PACKAGES += \
-	Camera
+    Camera
 
 # Build asusdec
 PRODUCT_PACKAGES += \
@@ -39,6 +34,9 @@ $(call inherit-product, device/asus/tf101g/device.mk)
 
 # inherit
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
+# for tf101g
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 
 # Enable xhdpi drawables while keeping mdpi as primary source
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
