@@ -226,14 +226,3 @@ service bugreport /system/bin/dumpstate -d -v -o /data/storage/bugreports/bugrep
 
 #on device-removed-/sys/block/sda
 #    umount /mnt/usbdrive
-
-# configure MSC partition
-#service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
-#    disabled
-#    class main
-#    user root
-#    group root
-#    oneshot
-
-#on property:sys.shutdown.requested=1recovery
-#    start mischelp
