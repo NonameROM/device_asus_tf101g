@@ -12,6 +12,10 @@ dalvik.vm.heaputilization=0.25
 dalvik.vm.heapidealfree=8388608
 dalvik.vm.heapconcurrentstart=2097152
 
-#Enable 3g
+# Enable 3g
 rild.libpath=/system/lib/libhuawei-ril.so
 rild.libargs=-d /dev/ttyUSB0
+
+# MASS STORAGE
+ro.config.hw_allow_ums_and_mtp=true
+ro.vold.umsdirtyratio=50

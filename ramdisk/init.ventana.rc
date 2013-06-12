@@ -13,8 +13,8 @@ on init
     export EMULATED_STORAGE_TARGET /storage/emulated
 
     # for backwards compatibility
-    symlink /storage/emulated/legacy /sdcard	
-    symlink /storage/emulated/legacy /mnt/sdcard	
+    symlink /storage/emulated/legacy /sdcard
+    symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
@@ -226,3 +226,14 @@ service bugreport /system/bin/dumpstate -d -v -o /data/storage/bugreports/bugrep
 
 #on device-removed-/sys/block/sda
 #    umount /mnt/usbdrive
+
+# configure MSC partition
+#service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
+#    disabled
+#    class main
+#    user root
+#    group root
+#    oneshot
+
+#on property:sys.shutdown.requested=1recovery
+#    start mischelp
