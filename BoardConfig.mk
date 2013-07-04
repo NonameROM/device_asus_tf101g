@@ -92,8 +92,11 @@ DEVICE_RESOLUTION := 1280x800
 
 # kernel - disable inline building for now  
 TARGET_KERNEL_SOURCE := kernel/asus/tf101g
-TARGET_KERNEL_CONFIG := katkernel_lidpatch_tf101g_defconfig
-#TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
+# KAT Kernel
+#TARGET_KERNEL_CONFIG := katkernel_lidpatch_tf101g_defconfig
+# EOS4 Kernel
+TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
+TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
 
 # recovery
 BOARD_HAS_NO_MISC_PARTITION := true
