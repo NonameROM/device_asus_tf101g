@@ -107,7 +107,7 @@
 
     <!-- Boolean indicating if current platform need do one-time bluetooth address
          re-validation -->
-    <bool name="config_bluetooth_address_validation">true</bool>
+    <bool name="config_bluetooth_address_validation">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
@@ -120,7 +120,7 @@
 
     <!-- Device type information conforming to Annex B format in WiFi Direct specification.
     The default represents a dual-mode smartphone -->
-    <string translatable="false" name="config_wifi_p2p_device_type">10-0050F204-4</string>
+    <string translatable="false" name="config_wifi_p2p_device_type">10-0050F204-5</string>
 
     <!-- List of file paths for USB host busses to exclude from USB host support.
          For example, if the first USB bus on the device is used to communicate
