@@ -12,10 +12,9 @@ on init
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
 
-    # for backwards compatibility
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
-    symlink /storage/emulated/legacy /storage/sdcard0
+    symlink /storage/emulated/legacy /storage/sdcard1
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
     # make the pathes for the external media mounts
@@ -228,12 +227,25 @@ service bugreport /system/bin/dumpstate -d -v -o /data/storage/bugreports/bugrep
 #    umount /mnt/usbdrive
 
 # configure MSC partition
-#service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
-#    disabled
-#    class main
-#    user root
-#    group root
-#    oneshot
+service mischelp /system/bin/mischelp /dev/block/platform/sdhci-tegra.3/by-name/MC boot-recovery
+    disabled
+    class main
+    user root
+    group root
+    oneshot
 
-#on property:sys.shutdown.requested=1recovery
-#    start mischelp
+on property:sys.shutdown.requested=1recovery
+    start mischelp
+
+# Prepare TF service
+service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
+    disabled
+    class main
+    user root
+    group shell
+    oneshot
+
+# Create data directory and start service
+on property:tf.enable=y
+    mkdir /data/tf
+    start tf_daemon
