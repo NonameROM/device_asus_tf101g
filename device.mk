@@ -158,7 +158,8 @@ PRODUCT_PACKAGES += \
     tinymix \
     tinyplay \
     tinyrec \
-    audio.primary.ventana
+    audio.primary.ventana \
+    mischelp
 
 # tf101g packages. Required for libhuawei-ril.so
 PRODUCT_PACKAGES += \
@@ -191,7 +192,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.allow.mock.location=1 \
-    persist.sys.usb.config=modem,nmea,adb,diag \
     ro.adb.secure=0 \
     ro.debuggable=1
 
