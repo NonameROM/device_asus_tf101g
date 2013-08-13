@@ -99,8 +99,6 @@ TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
 TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
 
 # SELinux policies
-ifeq ($(HAVE_SELINUX),true)
-
 BOARD_SEPOLICY_DIRS := \
     device/asus/tf101/selinux
 
@@ -109,8 +107,6 @@ BOARD_SEPOLICY_UNION := \
     file.te \
     device.te \
     domain.te
-
-endif
 
 # recovery
 RECOVERY_FSTAB_VERSION := 2
