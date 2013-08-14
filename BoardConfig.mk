@@ -42,11 +42,15 @@ TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-# scorpion
-BOARD_MALLOC_ALIGNMENT := 16
-USE_ALL_OPTIMIZED_STRING_FUNCS := true
+# Avoid the generation of ldrcc instructions
 NEED_WORKAROUND_CORTEX_A9_745320 := true
+
+BOARD_MALLOC_ALIGNMENT := 16
 TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
+
+#define to use all of the Linaro Cortex-A9 optimized string funcs,
+#instead of subset known to work on all machines
+USE_ALL_OPTIMIZED_STRING_FUNCS := true
 
 # wireless
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
