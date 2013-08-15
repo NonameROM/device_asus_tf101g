@@ -170,7 +170,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
     wifi.interface=wlan0 \
     ro.sf.lcd_density=160 \
-    ro.opengles.version=131072 \
     dalvik.vm.dexopt-data-only=1 \
     persist.sys.usb.config=mtp,adb \
     wifi.supplicant_scan_interval=180 \
