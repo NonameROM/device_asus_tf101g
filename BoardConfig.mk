@@ -100,7 +100,7 @@ TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
 
 # SELinux policies
 BOARD_SEPOLICY_DIRS := \
-    device/asus/tf101/selinux
+    device/asus/tf101g/selinux
 
 BOARD_SEPOLICY_UNION := \
     file_contexts \
