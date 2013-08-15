@@ -19,19 +19,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<!-- Defines the shutdown options shown in the reboot dialog. -->
-    <array name="shutdown_reboot_options" translatable="false">
-        <item>@string/reboot_reboot</item>
-        <item>@string/reboot_recovery</item>
-        <!--<item>@string/reboot_apx</item>-->
-    </array>
+<add-resource type="string" name="reboot_apx"></add-resource>
 
-    <!-- Do not translate. Defines the shutdown actions passed to the kernel.
-         The first item should be empty for regular reboot. -->
-    <string-array name="shutdown_reboot_actions" translatable="false">
-        <item></item>
-        <item>recovery</item>
-        <!--<item>apx</item>-->
-    </string-array>
+<!-- Button to reboot the phone into APX mode, within the Reboot Options dialog -->
+<string name="reboot_apx">APX mode</string>
 
 </resources>
