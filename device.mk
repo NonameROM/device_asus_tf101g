@@ -73,10 +73,13 @@ PRODUCT_COPY_FILES += \
 
 # ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/fstab.ventana:root/fstab.ventana \
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc
+
+# fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.ventana:root/fstab.ventana
 
 # tf101g ramdisk
 PRODUCT_COPY_FILES += \
