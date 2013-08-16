@@ -40,6 +40,7 @@ TARGET_ARCH_VARIANT := armv7-a
 TARGET_CPU_VARIANT := generic
 TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_CPU_SMP := true
+ARCH_ARM_HIGH_OPTIMIZATION := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Avoid the generation of ldrcc instructions
