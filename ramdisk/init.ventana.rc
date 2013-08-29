@@ -123,6 +123,10 @@ on boot
     chown gps system /sys/class/gpio/gpio203/value
     chmod 0664 /sys/class/gpio/gpio203/value
 
+#NTFS exFAT support
+#    insmod /sbin/tntfs.ko
+#    insmod /sbin/texfat.ko
+
 # RIL
 # Define TCP buffer sizes for hspa networks
 #   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax
@@ -210,6 +214,14 @@ service bugreport /system/bin/dumpstate -d -v -o /data/storage/bugreports/bugrep
     disabled
     oneshot
     keycodes 115 114
+
+#BCM
+service hciattach /system/bin/brcm_patchram_plus --enable_hci --scopcm=0,2,0,0,0,0,0,0,0,0 \
+    --baudrate 3000000 --patchram /etc/firmware/BCM4329B1_002.002.023.0797.0863.hcd --enable_lpm /dev/ttyHS2
+    class main
+    user root
+    group system bluetooth net_bt_admin misc
+    disabled
 
 # Start GPS daemon
   on boot

@@ -65,10 +65,10 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/vendor/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
 
-# Wifi tether tf101g
+# Wifi tether TF101G
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
-# RIL tf101g
+# RIL TF101G
 TARGET_PROVIDES_LIBRIL := true
 BOARD_USES_LEGACY_RIL := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
@@ -87,21 +87,17 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/tf101g/bluetooth
 
+# kernel - disable inline building for now  
+TARGET_KERNEL_SOURCE := kernel/asus/tf101g
+TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
+TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
+
 # camera
 USE_CAMERA_STUB := false
 
 # display
 BOARD_USE_SKIA_LCDTEXT := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
-DEVICE_RESOLUTION := 1280x800
-
-# kernel - disable inline building for now  
-TARGET_KERNEL_SOURCE := kernel/asus/tf101g
-# KAT Kernel
-#TARGET_KERNEL_CONFIG := katkernel_lidpatch_tf101g_defconfig
-# EOS4 Kernel
-TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
-TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
 
 # SELinux policies
 BOARD_SEPOLICY_DIRS := \

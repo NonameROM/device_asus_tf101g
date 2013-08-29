@@ -1,0 +1,7 @@
+[
+ {
+   "repository": "https://android.googlesource.com/device/generic/armv7-a",
+   "target_path": "device/generic/armv7-a"
+   "branch": "jb-mr1.1-release"
+ }
+]

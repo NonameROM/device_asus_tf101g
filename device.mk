@@ -14,8 +14,12 @@
 # limitations under the License.
 #
 
+#kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/kernel:kernel
+
 # overlay
-DEVICE_PACKAGE_OVERLAYS += device/asus/tf101g/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # vendor
 $(call inherit-product-if-exists, vendor/asus/tf101g/tf101g-vendor.mk)
@@ -48,22 +52,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
-
-PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
-	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml)
-
-# tf101g hardware
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/firmware/modem/EM820W_11.810.09.17.00.zip:system/etc/firmware/modem/EM820W_11.810.09.17.00.zip \
-    $(LOCAL_PATH)/prebuilt/etc/ppp/ip-down-HUAWEI:system/etc/ppp/ip-down-HUAWEI \
-    $(LOCAL_PATH)/prebuilt/etc/ppp/ip-up-HUAWEI:system/etc/ppp/ip-up-HUAWEI \
-    $(LOCAL_PATH)/prebuilt/lib/libhuawei-ril.so:system/lib/libhuawei-ril.so
-
-# mini bootanimation
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
 
 # idc
 PRODUCT_COPY_FILES += \
@@ -73,15 +62,13 @@ PRODUCT_COPY_FILES += \
 
 # ramdisk
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.ventana:root/fstab.ventana \
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc \
+    $(LOCAL_PATH)/ramdisk/init.ventana.keyboard.rc:root/init.ventana.keyboard.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc
 
-# fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.ventana:root/fstab.ventana
-
-# tf101g ramdisk
+# ramdisk TF101G (ril-daemon add vpn group)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.rc:root/init.rc
 
@@ -139,6 +126,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib/modules/xpad.ko:system/lib/modules/xpad.ko \
     $(LOCAL_PATH)/prebuilt/lib/modules/texfat.ko:system/lib/modules/texfat.ko
 
+# TF101G hardware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/firmware/modem/EM820W_11.810.09.17.00.zip:system/etc/firmware/modem/EM820W_11.810.09.17.00.zip \
+    $(LOCAL_PATH)/prebuilt/etc/ppp/ip-down-HUAWEI:system/etc/ppp/ip-down-HUAWEI \
+    $(LOCAL_PATH)/prebuilt/etc/ppp/ip-up-HUAWEI:system/etc/ppp/ip-up-HUAWEI \
+    $(LOCAL_PATH)/prebuilt/lib/libglib.so:system/lib/libglib.so \
+    $(LOCAL_PATH)/prebuilt/lib/libhuawei-ril.so:system/lib/libhuawei-ril.so
+
 # init.d
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/init.d/05modules:system/etc/init.d/05modules
@@ -158,32 +153,23 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libinvensense_mpl \
     blobpack_tf \
+    mischelp \
+    libaudioutils \
     tinymix \
     tinyplay \
     tinyrec \
-    audio.primary.ventana \
-    mischelp
-
-# tf101g packages. Required for libhuawei-ril.so
-PRODUCT_PACKAGES += \
-    libglib
+    audio.primary.ventana
 
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
     wifi.interface=wlan0 \
+    ro.carrier=wifi-only \
     ro.sf.lcd_density=160 \
     dalvik.vm.dexopt-data-only=1 \
-    persist.sys.usb.config=mtp,adb \
+    persist.sys.usb.config=mtp \
     wifi.supplicant_scan_interval=180 \
     ro.opengles.version=196608
-
-# ft101g override
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.pad.features.modem=true \
-    keyguard.no_require_sim=1 \
-    gsm.bodysargsm=32,26,29,29 \
-    ro.cgsms.mode=1
 
 # My override
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -191,13 +177,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.region=RU \
     ro.com.android.dateformat=dd-MM-yyyy
 
+# TF101G override
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.pad.features.modem=true \
+    keyguard.no_require_sim=true \
+    gsm.bodysargsm=32,26,29,29 \
+    ro.cgsms.mode=1 \
+    persist.radio.apm_sim_not_pwdn=1
+
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.allow.mock.location=1 \
     ro.adb.secure=0 \
     ro.debuggable=1
-
-# Do not power down SIM card when modem is sent to Low Power Mode.
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1

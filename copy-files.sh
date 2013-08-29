@@ -17,3 +17,4 @@ for FILE in `cat proprietary-files.txt`; do
 done
 
 ./setup-makefiles.sh
+

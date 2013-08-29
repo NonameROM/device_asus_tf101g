@@ -3,7 +3,7 @@
 SOURCE=$1
 
 # script/rom relative position to place files.
-BASE=../../../vendor/asus/tf101/proprietary
+BASE=../../../vendor/asus/tf101g/proprietary
 rm -rf $BASE/*
 
 for FILE in `cat proprietary-files.txt`; do
@@ -11,7 +11,7 @@ for FILE in `cat proprietary-files.txt`; do
     if [ ! -d $BASE/$DIR ]; then
         mkdir -p $BASE/$DIR
     fi
-    cp $SOURCE/vendor/asus/tf101/proprietary/$FILE $BASE/$FILE
+    cp $SOURCE/vendor/asus/tf101g/proprietary/$FILE $BASE/$FILE
 done
 
 ./setup-makefiles.sh

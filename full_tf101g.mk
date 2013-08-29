@@ -14,9 +14,14 @@
 # limitations under the License.
 #
 
-# Camera
+# camera
+PRODUCT_PACKAGES := \
+	HoloSpiralWallpaper \
+	LiveWallpapersPicker \
+	VisualizationWallpapers \
+
 PRODUCT_PACKAGES += \
-    Camera
+	Camera
 
 # Build asusdec
 PRODUCT_PACKAGES += \
@@ -25,18 +30,15 @@ PRODUCT_PACKAGES += \
 
 # AGPS patch
 PRODUCT_COPY_FILES += \
-    device/asus/tf101g/prebuilt/etc/gps.conf:system/etc/gps.conf \
-    device/asus/tf101g/prebuilt/etc/SuplRootCert:system/etc/SuplRootCert \
-    device/asus/tf101g/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+    $(LOCAL_PATH)/prebuilt/etc/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/prebuilt/etc/SuplRootCert:system/etc/SuplRootCert \
+    $(LOCAL_PATH)/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
 # device
 $(call inherit-product, device/asus/tf101g/device.mk)
 
 # inherit
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-
-# for tf101g
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Enable xhdpi drawables while keeping mdpi as primary source
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
@@ -48,3 +50,9 @@ PRODUCT_DEVICE := tf101g
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := Asus
 PRODUCT_MODEL := Transformer Pad
+
+ifneq ($(CM_BUILDTYPE),UNOFFICIAL)
+    CM_BUILDTYPE := NO-NAME-ROM
+    CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)$(CM_EXTRAVERSION)
+endif
+

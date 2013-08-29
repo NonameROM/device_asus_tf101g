@@ -49,7 +49,7 @@
         <item>bt_dun,14,14,2,-1,true</item>
         <item>wifi_p2p,13,1,0,-1,true</item>
     </string-array>
-    <string name="config_datause_iface">wlan0</string>
+	<string name="config_datause_iface">wlan0</string>
     <!-- This string array should be overridden by the device to present a list of radio
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
@@ -80,9 +80,7 @@
         <item>"rndis0"</item>
     </string-array>
 
-    <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
-    <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
-    <!== [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
+    <!-- Array of allowable ConnectivityManager network types for tethering -->
     <integer-array translatable="false" name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
@@ -104,10 +102,6 @@
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
         <item>"bnep\\d"</item>
     </string-array>
-
-    <!-- Boolean indicating if current platform need do one-time bluetooth address
-         re-validation -->
-    <bool name="config_bluetooth_address_validation">false</bool>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
@@ -155,7 +149,7 @@
     <!--bool name="config_hasTouchpad">true</bool -->
 
     <!-- Disable CRT-OFF animation -->
-    <!-- bool name="config_screenOffAnimation">true</bool -->
+    <!--bool name="config_screenOffAnimation">false</bool -->
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -222,13 +216,10 @@
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">true</bool>
 
-    <bool name="config_hasRemovableLid">true</bool>
-
     <!-- Enables SIP on WIFI only -->
     <bool name="config_sip_wifi_only">false</bool>
 
-    <!-- Enables built-in SIP phone capability -->
-    <bool name="config_built_in_sip_phone">true</bool>
+    <bool name="config_hasRemovableLid">true</bool>
 
     <!-- Enable puk unlockscreen -->
     <bool name="config_enable_puk_unlock_screen">true</bool>
@@ -260,7 +251,7 @@
          movement threshold where scrolling should begin.
 
           -->
-    <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
+    <dimen name="config_viewConfigurationTouchSlop">8dp</dimen>
 
     <!-- Separate software navigation bar required on this device. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -274,22 +265,21 @@
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">8</integer>
 
+    <!-- Asus Dock Compatiblity should be enabled -->
+    <bool name="config_hasDockBattery">true</bool>
+
     <!-- Display low battery warning when battery level dips to this value -->
     <integer translatable="false" name="config_lowBatteryWarningLevel">5</integer>
 
     <!-- Close low battery warning when battery level reaches this value -->
     <integer translatable="false" name="config_lowBatteryCloseWarningLevel">10</integer>
 
-    <!-- Asus Dock Compatiblity should be enabled -->
-    <bool name="config_hasDockBattery">true</bool>
+
+    <add-resource type="string" name="config_deviceHandlersLib"></add-resource>
     <string name="config_deviceHandlersLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
+    <add-resource type="string" name="config_deviceDockBatteryHandlerClass"></add-resource>
     <string name="config_deviceDockBatteryHandlerClass" translatable="false">com.cyanogenmod.asusdec.DockBatteryHandler</string>
+    <add-resource type="string" name="config_deviceKeyHandlerClass"></add-resource>
     <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string>
 
-    <add-resource type="string" name="storage_usbdisk1"></add-resource>
-    <string name="storage_usbdisk1">USB Device 1</string>
-    <add-resource type="string" name="storage_usbdisk2"></add-resource>
-    <string name="storage_usbdisk2">USB Device 2</string>
-    <add-resource type="string" name="storage_sdreader"></add-resource>
-    <string name="storage_sdreader">Dock SD CARD</string>
 </resources>

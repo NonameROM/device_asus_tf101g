@@ -36,7 +36,7 @@
 
 <StorageList xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- internal emulated storage -->
-    <storage android:mountPoint="/storage/emulated/legacy"
+    <storage android:mountPoint="/storage/sdcard0"
             android:storageDescription="@string/storage_internal"
             android:primary="true"
             android:emulated="true"
@@ -46,19 +46,17 @@
             android:storageDescription="@string/storage_sd_card"
             android:removable="true"
             android:maxFileSize="4096" />
-    <!-- dock USB Port 1 -->
-    <storage android:mountPoint="/storage/usbdisk0"
-             android:storageDescription="@string/storage_usbdisk1" 
-             android:primary="false" 
-             android:removable="true" />
-    <!-- dock USB Port 2 -->
-    <storage android:mountPoint="/storage/usbdisk1"
-             android:storageDescription="@string/storage_usbdisk2" 
-             android:primary="false" 
-             android:removable="true" />
-    <!-- dock SD card -->
+     <!-- Dock SD Card -->
     <storage android:mountPoint="/storage/sdcard2"
-             android:storageDescription="@string/storage_sdreader" 
-             android:primary="false" 
-             android:removable="true" />
+            android:storageDescription="@string/storage_sd_dock_card"
+            android:removable="true"
+            android:maxFileSize="4096" />
+    <!-- external USB drive -->
+    <storage android:mountPoint="/storage/usbdisk0"
+            android:storageDescription="@string/storage_usb"
+            android:removable="true" />
+    <!-- external USB drive -->
+    <storage android:mountPoint="/storage/usbdisk1"
+            android:storageDescription="@string/storage_usb"
+            android:removable="true" />
 </StorageList>
