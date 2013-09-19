@@ -72,7 +72,7 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 TARGET_PROVIDES_LIBRIL := true
 BOARD_USES_LEGACY_RIL := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
-USE_IPV6_ROUTE := true
+#USE_IPV6_ROUTE := true
 
 # audio
 BOARD_USES_ALSA_AUDIO := false
@@ -89,8 +89,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/tf101g/bluetooth
 
 # kernel - disable inline building for now  
 TARGET_KERNEL_SOURCE := kernel/asus/tf101g
-TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
 TARGET_PREBUILT_KERNEL := device/asus/tf101g/prebuilt/kernel
+# KAT Kernel
+#TARGET_KERNEL_CONFIG := katkernel_lidpatch_tf101g_defconfig
+# EOS Kernel
+TARGET_KERNEL_CONFIG := tf101g_eos_defconfig
 
 # camera
 USE_CAMERA_STUB := false
