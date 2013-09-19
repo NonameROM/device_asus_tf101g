@@ -34,6 +34,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/vendor/firmware/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin \
     $(LOCAL_PATH)/prebuilt/vendor/firmware/BCM4329B1_002.002.023.0797.0863.hcd:system/etc/firmware/BCM4329B1_002.002.023.0797.0863.hcd
 
+# KAT
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+    $(LOCAL_PATH)/prebuilt/etc/nvram_4329.txt:system/etc/firmware/nvram.txt
+
 # hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
