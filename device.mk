@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
     tinyrec \
     audio.primary.ventana
 
+# Asus
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.asusdec
+
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
