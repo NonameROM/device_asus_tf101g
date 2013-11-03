@@ -1,6 +1,5 @@
 bin/sensors-config
 bin/glgps
-etc/asound.conf
 etc/firmware/nvmm_aacdec.axf
 etc/firmware/nvmm_adtsdec.axf
 etc/firmware/nvmm_h264dec.axf
