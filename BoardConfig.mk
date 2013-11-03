@@ -80,6 +80,9 @@ BOARD_USES_GENERIC_AUDIO := false
 # battery
 TARGET_HAS_DOCK_BATTERY := true
 
+# Use the CM PowerHAL
+TARGET_USES_CM_POWERHAL := true
+
 # bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
