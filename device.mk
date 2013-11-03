@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 # KAT
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_4329.txt:system/etc/firmware/nvram.txt
+    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/firmware/nvram.txt
 
 # hardware
 PRODUCT_COPY_FILES += \
@@ -59,14 +59,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-#asusdec permissions
+# Asus permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/asusdec/com.cyanogenmod.asusdec.xml:system/etc/permissions/com.cyanogenmod.asusdec.xml
-
-# KAT
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/firmware/nvram.txt
 
 # idc
 PRODUCT_COPY_FILES += \
@@ -176,10 +171,6 @@ PRODUCT_PACKAGES += \
     audio_policy.tegra \
     audio.primary.tegra \
     librs_jni
-
-# Asus
-PRODUCT_PACKAGES += \
-    com.cyanogenmod.asusdec
 
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
