@@ -4,14 +4,14 @@
 <hal
     acPortName="/dev/ttyHS1"
     lBaudRate="115200"
-    cLogEnabled="true"
+    cLogEnabled="false"
     acLogDirectory="/data/gps"
     ltoFileName="lto.dat"
     ctrlPipe="/data/gps/glgpsctrl"
     lcsApiSockName="/dev/socket/gps"
     gpioNStdbyPath="/sys/class/gpio/gpio203/value"
     acNvStoDir="/data/gps/"
-    acNmeaOutName="/data/gps/nmeapipe"  
+    acNmeaOutName="/data/gps/nmeapipe"
 />
 
 <!-- GPS configuration with standalone 16.8 MHz TCXO  -->
@@ -20,7 +20,7 @@
     LogFacMask="LOG_GLLAPI | LOG_NMEA | LOG_RAWDATA"
     FrqPlan="FRQ_PLAN_26MHZ_2PPM"
     RfType="GL_RF_4751_DANUBE_EXT_LNA"
-    PeriodicTimeOutSec="120"
+    PeriodicTimeOutSec="40"
 />
 
 <!-- GPS configuration for with 16.8 MHz TCXO
