@@ -188,7 +188,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.carrier=wifi-only \
     ro.sf.lcd_density=160 \
     dalvik.vm.dexopt-data-only=1 \
-    persist.sys.usb.config=mtp \
     wifi.supplicant_scan_interval=180 \
     ro.opengles.version=196608
 
@@ -210,5 +209,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.allow.mock.location=1 \
+    persist.sys.usb.config=mtp \
     ro.adb.secure=0 \
     ro.debuggable=1
