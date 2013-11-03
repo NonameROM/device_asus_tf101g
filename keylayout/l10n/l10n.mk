@@ -8,7 +8,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/asusec-el_GR.kl:system/usr/keylayout/asusec-el_GR.kl \
     $(LOCAL_PATH)/asusec-en_CA.kl:system/usr/keylayout/asusec-en_CA.kl \
     $(LOCAL_PATH)/asusec-en_GB.kl:system/usr/keylayout/asusec-en_GB.kl \
-    $(LOCAL_PATH)/asusec-en_GR.kl:system/usr/keylayout/asusec-en_GR.kl \
     $(LOCAL_PATH)/asusec-en_US.kl:system/usr/keylayout/asusec-en_US.kl \
     $(LOCAL_PATH)/asusec-es_ES.kl:system/usr/keylayout/asusec-es_ES.kl \
     $(LOCAL_PATH)/asusec-es_US.kl:system/usr/keylayout/asusec-es_US.kl \
@@ -35,4 +34,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/asusec-th_TH.kl:system/usr/keylayout/asusec-th_TH.kl \
     $(LOCAL_PATH)/asusec-tr_TR.kl:system/usr/keylayout/asusec-tr_TR.kl \
     $(LOCAL_PATH)/asusec-zh_CN.kl:system/usr/keylayout/asusec-zh_CN.kl \
-    $(LOCAL_PATH)/asusec-zh_TW.kl:system/usr/keylayout/asusec-zh_TW.kl
+    $(LOCAL_PATH)/asusec-zh_TW.kl:system/usr/keylayout/asusec-zh_TW.kl \
+    $(LOCAL_PATH)/asusec-es_LA.kl:system/usr/keylayout/asusec-es_LA.kl \
+    $(LOCAL_PATH)/asusec-sl_SI.kl:system/usr/keylayout/asusec-sl_SI.kl
