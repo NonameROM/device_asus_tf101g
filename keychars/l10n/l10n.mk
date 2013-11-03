@@ -7,7 +7,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/asusec-el_GR.kcm:system/usr/keychars/asusec-el_GR.kcm \
     $(LOCAL_PATH)/asusec-en_CA.kcm:system/usr/keychars/asusec-en_CA.kcm \
     $(LOCAL_PATH)/asusec-en_GB.kcm:system/usr/keychars/asusec-en_GB.kcm \
-    $(LOCAL_PATH)/asusec-en_GR.kcm:system/usr/keychars/asusec-en_GR.kcm \
     $(LOCAL_PATH)/asusec-en_US.kcm:system/usr/keychars/asusec-en_US.kcm \
     $(LOCAL_PATH)/asusec-es_ES.kcm:system/usr/keychars/asusec-es_ES.kcm \
     $(LOCAL_PATH)/asusec-es_US.kcm:system/usr/keychars/asusec-es_US.kcm \
@@ -34,4 +33,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/asusec-th_TH.kcm:system/usr/keychars/asusec-th_TH.kcm \
     $(LOCAL_PATH)/asusec-tr_TR.kcm:system/usr/keychars/asusec-tr_TR.kcm \
     $(LOCAL_PATH)/asusec-zh_CN.kcm:system/usr/keychars/asusec-zh_CN.kcm \
-    $(LOCAL_PATH)/asusec-zh_TW.kcm:system/usr/keychars/asusec-zh_TW.kcm
+    $(LOCAL_PATH)/asusec-zh_TW.kcm:system/usr/keychars/asusec-zh_TW.kcm \
+    $(LOCAL_PATH)/asusec-es_LA.kcm:system/usr/keychars/asusec-es_LA.kcm \
+    $(LOCAL_PATH)/asusec-sl_SI.kcm:system/usr/keychars/asusec-sl_SI.kcm

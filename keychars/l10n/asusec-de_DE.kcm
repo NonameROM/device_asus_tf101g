@@ -354,7 +354,7 @@ key APOSTROPHE {
     alt, ctrl, meta:                    none
 }
 
-key POUND {
+key BACKSLASH {
     label, number:                      '#'
     base:                               '#'
     shift, capslock:                    '\''
@@ -368,7 +368,7 @@ key ENTER {
     alt, ctrl, meta:                    none
 }
 
-key BACKSLASH {
+key EUROPE_2 {
     label, number:                      '<'
     base:                               '<'
     shift, capslock:                    '>'
