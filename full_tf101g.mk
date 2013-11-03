@@ -16,12 +16,12 @@
 
 # camera
 PRODUCT_PACKAGES := \
-	HoloSpiralWallpaper \
-	LiveWallpapersPicker \
-	VisualizationWallpapers \
+    HoloSpiralWallpaper \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
 
 PRODUCT_PACKAGES += \
-	Camera
+    Camera
 
 # Build asusdec
 PRODUCT_PACKAGES += \
@@ -44,7 +44,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Enable xhdpi drawables while keeping mdpi as primary source
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # product
 PRODUCT_NAME := full_tf101g
@@ -57,4 +57,3 @@ ifneq ($(CM_BUILDTYPE),UNOFFICIAL)
     CM_BUILDTYPE := NO-NAME-ROM
     CM_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)-$(CM_BUILD)$(CM_EXTRAVERSION)
 endif
-
