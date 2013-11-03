@@ -65,7 +65,8 @@ PRODUCT_COPY_FILES += \
 
 # KAT
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd
+    $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/firmware/nvram.txt
 
 # idc
 PRODUCT_COPY_FILES += \
