@@ -174,7 +174,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
     wifi.interface=wlan0 \
-    ro.carrier=wifi-only \
     ro.ethernet.interface=eth0 \
     ro.ethernet.autoEnable=yes \
     ro.sf.lcd_density=160 \
