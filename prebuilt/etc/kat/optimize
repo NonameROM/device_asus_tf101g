@@ -1,0 +1,14 @@
+#!/system/bin/sh
+echo ====================================================
+echo ================ K.A.T Optimizing ==================
+echo ====================================================
+echo
+
+/etc/kat/optimizedb
+echo
+echo
+
+/etc/kat/optimizestorage
+
+echo
+echo ========== FINISHED =============

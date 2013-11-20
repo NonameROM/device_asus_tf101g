@@ -39,6 +39,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
     $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/firmware/nvram.txt
 
+# KAT Utilities
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/kat/optimize:system/etc/kat/optimize \
+    $(LOCAL_PATH)/prebuilt/etc/kat/optimizedb:system/etc/kat/optimizedb \
+    $(LOCAL_PATH)/prebuilt/etc/kat/optimizestorage:system/etc/kat/optimizestorage
+
 # hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
