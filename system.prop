@@ -15,3 +15,11 @@ dalvik.vm.heapconcurrentstart=2097152
 # Enable 3g
 rild.libpath=/system/lib/libhuawei-ril.so
 rild.libargs=-d /dev/ttyUSB0
+ro.config.hw_addsettingsdbex=1
+
+# Default network type.
+# 0 => WCDMA preferred.
+ro.telephony.default_network=0
+
+# For HSDPA low throughput
+ro.ril.disable.power.collapse=1
