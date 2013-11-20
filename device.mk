@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-#kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/kernel:kernel
-
 # overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -26,6 +22,10 @@ $(call inherit-product-if-exists, vendor/asus/tf101g/tf101g-vendor.mk)
 
 # firmware
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/nvram.txt \
+    $(LOCAL_PATH)/prebuilt/etc/nvram_nh615.txt:system/etc/nvram_nh615.txt \
+    $(LOCAL_PATH)/prebuilt/etc/nvram_murata.txt:system/etc/nvram_murata.txt \
+    $(LOCAL_PATH)/prebuilt/etc/nvram_nh615_sl101.txt:system/etc/nvram_nh615_sl101.txt \
     $(LOCAL_PATH)/prebuilt/etc/nvram_4329.txt:system/etc/nvram_4329.txt \
     $(LOCAL_PATH)/prebuilt/etc/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
     $(LOCAL_PATH)/prebuilt/vendor/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
@@ -116,13 +116,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/bin/wifimacwriter:system/bin/wifimacwriter \
     $(LOCAL_PATH)/prebuilt/data/srs_processing.cfg:system/data/srs_processing.cfg
 
-# wireless
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/nvram.txt \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_nh615.txt:system/etc/nvram_nh615.txt \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_murata.txt:system/etc/nvram_murata.txt \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_nh615_sl101.txt:system/etc/nvram_nh615_sl101.txt
-
 # bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf \
@@ -193,7 +186,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     gsm.bodysargsm=32,26,29,29 \
     ro.cgsms.mode=1 \
-    persist.radio.apm_sim_not_pwdn=1
+    persist.radio.apm_sim_not_pwdn=1 \
+    picasso.3g=true
 
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += \
