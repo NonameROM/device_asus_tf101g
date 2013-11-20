@@ -65,7 +65,7 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/vendor/firmware/fw_bcmdhd_p2p.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
 
-# Wifi tether TF101G
+# Wifi tether
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # RIL TF101G
