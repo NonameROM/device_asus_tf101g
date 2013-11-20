@@ -126,15 +126,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/nvcamera.conf:system/etc/nvcamera.conf
 
-# modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib/modules/battery_rvsd.ko:system/lib/modules/battery_rvsd.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/cifs.ko:system/lib/modules/cifs.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/ff-memless.ko:system/lib/modules/ff-memless.ko \
     $(LOCAL_PATH)/prebuilt/lib/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/tun.ko:system/lib/modules/tun.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/xpad.ko:system/lib/modules/xpad.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/texfat.ko:system/lib/modules/texfat.ko
+    $(LOCAL_PATH)/prebuilt/lib/modules/ipip.ko:system/lib/modules/ipip.ko
 
 # TF101G hardware
 PRODUCT_COPY_FILES += \
@@ -143,10 +138,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/ppp/ip-up-HUAWEI:system/etc/ppp/ip-up-HUAWEI \
     $(LOCAL_PATH)/prebuilt/lib/libglib.so:system/lib/libglib.so \
     $(LOCAL_PATH)/prebuilt/lib/libhuawei-ril.so:system/lib/libhuawei-ril.so
-
-# init.d
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/init.d/05modules:system/etc/init.d/05modules
 
 # tablet
 PRODUCT_CHARACTERISTICS := tablet
