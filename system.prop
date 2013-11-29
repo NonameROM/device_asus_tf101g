@@ -25,3 +25,7 @@ ro.telephony.default_network=0
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
+
+sensor.loop.minms=0
+orientation.magnitude.threshold=50
+ro.sys.fw.bg_apps_limit = 20
