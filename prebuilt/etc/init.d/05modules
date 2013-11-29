@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+insmod /system/lib/modules/isofs.ko
+insmod /system/lib/modules/ntfs.ko
+insmod /system/lib/modules/udf.ko

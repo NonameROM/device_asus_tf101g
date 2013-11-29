@@ -125,10 +125,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/nvcamera.conf:system/etc/nvcamera.conf
 
+# kernel modules
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/lib/modules/apm-emulation.ko:system/lib/modules/apm-emulation.ko \
     $(LOCAL_PATH)/prebuilt/lib/modules/battery_rvsd.ko:system/lib/modules/battery_rvsd.ko \
+    $(LOCAL_PATH)/prebuilt/lib/modules/ipip.ko:system/lib/modules/ipip.ko \
+    $(LOCAL_PATH)/prebuilt/lib/modules/isofs.ko:system/lib/modules/isofs.ko \
+    $(LOCAL_PATH)/prebuilt/lib/modules/ntfs.ko:system/lib/modules/ntfs.ko \
     $(LOCAL_PATH)/prebuilt/lib/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-    $(LOCAL_PATH)/prebuilt/lib/modules/ipip.ko:system/lib/modules/ipip.ko
+    $(LOCAL_PATH)/prebuilt/lib/modules/udf.ko:system/lib/modules/udf.ko
+
+# init.d
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/init.d/05modules:system/etc/init.d/05modules
 
 # TF101G hardware
 PRODUCT_COPY_FILES += \
