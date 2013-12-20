@@ -18,6 +18,11 @@ dalvik.vm.dexopt-data-only=1
 rild.libpath=/system/lib/libhuawei-ril.so
 rild.libargs=-d /dev/ttyUSB0
 ro.config.hw_addsettingsdbex=1
+ro.carrier=unknown
+ro.ril.gprsclass=34
+ro.ril.hsdpa.category=14
+ro.ril.hsupa.category=6
+ro.ril.hsxpa=3
 
 # Default network type.
 # 0 => WCDMA preferred.
