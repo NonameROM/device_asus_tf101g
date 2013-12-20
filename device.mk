@@ -144,7 +144,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/firmware/modem/EM820W_11.810.09.17.00.zip:system/etc/firmware/modem/EM820W_11.810.09.17.00.zip \
     $(LOCAL_PATH)/prebuilt/etc/ppp/ip-down-HUAWEI:system/etc/ppp/ip-down-HUAWEI \
     $(LOCAL_PATH)/prebuilt/etc/ppp/ip-up-HUAWEI:system/etc/ppp/ip-up-HUAWEI \
-    $(LOCAL_PATH)/prebuilt/lib/libglib.so:system/lib/libglib.so \
     $(LOCAL_PATH)/prebuilt/lib/libhuawei-ril.so:system/lib/libhuawei-ril.so
 
 # tablet
