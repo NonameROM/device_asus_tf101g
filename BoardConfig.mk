@@ -69,7 +69,6 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/fw_bcmdhd_apsta.bin
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # RIL TF101G
-TARGET_PROVIDES_LIBRIL := true
 BOARD_USES_LEGACY_RIL := true
 BOARD_HAS_EXTRA_SYS_PROPS := true
 USE_IPV6_ROUTE := true
@@ -111,8 +110,8 @@ BOARD_SEPOLICY_UNION := \
     file_contexts \
     file.te \
     device.te \
-    domain.te \
-    rild.te
+    domain.te
+#    rild.te
 
 # recovery
 RECOVERY_FSTAB_VERSION := 2
