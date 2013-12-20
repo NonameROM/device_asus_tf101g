@@ -167,6 +167,11 @@ PRODUCT_PACKAGES += \
     audio.primary.tegra \
     librs_jni
 
+# Phone packages
+PRODUCT_PACKAGES += \
+    Stk \
+    Phone
+
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
