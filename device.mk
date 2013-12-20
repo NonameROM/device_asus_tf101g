@@ -189,8 +189,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     gsm.bodysargsm=32,26,29,29 \
     ro.cgsms.mode=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
-    picasso.3g=true
+    persist.radio.apm_sim_not_pwdn=1
 
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += \
