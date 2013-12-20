@@ -84,10 +84,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc
 
-# ramdisk TF101G (ril-daemon add vpn group)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/init.rc:root/init.rc
-
 # keychars
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keychars/asusec.kcm:system/usr/keychars/asusec.kcm
