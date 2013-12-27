@@ -170,7 +170,9 @@ PRODUCT_PACKAGES += \
 # Phone packages
 PRODUCT_PACKAGES += \
     Stk \
-    Phone
+    Phone \
+    Contacts \
+    Mms
 
 # override
 PRODUCT_PROPERTY_OVERRIDES := \
