@@ -141,7 +141,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/init.d/05modules:system/etc/init.d/05modules
 
-# TF101G hardware
+# TF101G modem
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/firmware/modem/EM820W_11.810.09.17.00.zip:system/etc/firmware/modem/EM820W_11.810.09.17.00.zip \
     $(LOCAL_PATH)/prebuilt/etc/ppp/ip-down-HUAWEI:system/etc/ppp/ip-down-HUAWEI \
@@ -174,7 +174,7 @@ PRODUCT_PACKAGES += \
     librs_jni \
     libnetcmdiface
 
-# Phone packages
+# TF101G phone packages
 PRODUCT_PACKAGES += \
     Stk \
     Phone \
@@ -185,8 +185,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.wifi.country=GB \
     wifi.interface=wlan0 \
-    ro.ethernet.interface=eth0 \
-    ro.ethernet.autoEnable=yes \
     ro.sf.lcd_density=160 \
     dalvik.vm.dexopt-data-only=1 \
     dalvik.vm.execution-mode=int:jit \
