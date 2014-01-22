@@ -11,14 +11,11 @@ dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heaputilization=0.25
 dalvik.vm.heapidealfree=8388608
 dalvik.vm.heapconcurrentstart=2097152
-dalvik.vm.execution-mode=int:jit
-dalvik.vm.dexopt-data-only=1
 
 # Enable 3g
 rild.libpath=/system/lib/libhuawei-ril.so
 rild.libargs=-d /dev/ttyUSB0
 ro.config.hw_addsettingsdbex=1
-ro.carrier=unknown
 ro.ril.gprsclass=34
 ro.ril.hsdpa.category=14
 ro.ril.hsupa.category=6
@@ -30,7 +27,3 @@ ro.telephony.default_network=0
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
-
-sensor.loop.minms=0
-orientation.magnitude.threshold=50
-ro.sys.fw.bg_apps_limit = 20
