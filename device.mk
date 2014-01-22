@@ -167,7 +167,8 @@ PRODUCT_PACKAGES += \
     tinyrec \
     audio_policy.tegra \
     audio.primary.tegra \
-    librs_jni
+    librs_jni \
+    libnetcmdiface
 
 # Phone packages
 PRODUCT_PACKAGES += \
