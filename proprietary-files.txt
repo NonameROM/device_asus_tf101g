@@ -16,7 +16,6 @@ etc/firmware/nvmm_wavdec.axf
 etc/firmware/nvmm_wmadec.axf
 etc/firmware/nvmm_wmaprodec.axf
 etc/firmware/nvrm_avp.bin
-etc/wifi/wpa_supplicant.conf
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
