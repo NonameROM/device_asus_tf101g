@@ -184,6 +184,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.ethernet.interface=eth0 \
     ro.ethernet.autoEnable=yes \
     ro.sf.lcd_density=160 \
+    dalvik.vm.dexopt-data-only=1 \
+    dalvik.vm.execution-mode=int:jit \
     wifi.supplicant_scan_interval=180 \
     ro.opengles.version=196608
 
