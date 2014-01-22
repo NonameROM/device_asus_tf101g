@@ -136,3 +136,6 @@ BOARD_USES_OVERLAY := true
 BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_EGL_CFG := device/asus/tf101g/prebuilt/lib/hw/egl.cfg
 USE_OPENGL_RENDERER := true
+
+# CMHW
+BOARD_HARDWARE_CLASS := device/asus/tf101g/cmhw/
