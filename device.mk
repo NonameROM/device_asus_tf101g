@@ -191,7 +191,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=ru \
     ro.product.locale.region=RU \
-    ro.com.android.dateformat=dd-MM-yyyy
+    ro.com.android.dateformat=dd-MM-yyyy \
+    persist.sys.timezone=Europe/Moscow
 
 # TF101G override
 PRODUCT_PROPERTY_OVERRIDES += \
