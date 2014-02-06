@@ -3,6 +3,7 @@ windowsmgr.max_events_per_sec=275
 # system.prop for tf101g
 #
 ## cannot take spaces
+ro.sys.fw.bg_apps_limit = 20
 
 # Fields For VM Heapsize
 dalvik.vm.heapsize=384m
