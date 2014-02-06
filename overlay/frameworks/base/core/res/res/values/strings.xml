@@ -18,26 +18,10 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <add-resource type="string" name="reboot_apx"></add-resource>
-    <!-- Button to reboot the phone into APX mode, within the Reboot Options dialog -->
-    <string name="reboot_apx">APX mode</string>
 
-    <!-- Storage description for internal storage. [CHAR LIMIT=NONE] -->
-    <string name="storage_internal">Internal Storage</string>
+<add-resource type="string" name="reboot_apx"></add-resource>
 
-    <!-- Storage description for the SD card. [CHAR LIMIT=NONE] -->
-    <string name="storage_sd_card">Micro SD Card</string>
+<!-- Button to reboot the phone into APX mode, within the Reboot Options dialog -->
+<string name="reboot_apx">APX mode</string>
 
-    <!-- Transformer dock storage devices -->
-    <!-- Storage description for USBDisk1 storage. [CHAR LIMIT=NONE] -->
-    <add-resource type="string" name="storage_usbdisk1"></add-resource>
-    <string name="storage_usbdisk1">USB Device 1</string>
-
-    <!-- Storage description for USBDisk2 storage. [CHAR LIMIT=NONE] -->
-    <add-resource type="string" name="storage_usbdisk2"></add-resource>
-    <string name="storage_usbdisk2">USB Device 2</string>
-
-    <!-- Storage description for SDCard storage. [CHAR LIMIT=NONE] -->
-    <add-resource type="string" name="storage_sdreader"></add-resource>
-    <string name="storage_sdreader">Dock SD CARD</string>
 </resources>
